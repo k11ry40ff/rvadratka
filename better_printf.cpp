@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <assert.h>
 
 #include "colors.h"
 #include "better_printf.h"
@@ -11,8 +12,8 @@ void bprintf(const char* color, const char* bg_color, const int is_bold, const i
     assert(bg_color);
     assert(line);
 
-    printf(color);
-    printf(bg_color); // FIXME asserts
+    printf("%s", color);
+    printf("%s", bg_color);
 
     if (is_bold == SETTING_IS_TRUE) {
         printf(BOLD);

@@ -2,6 +2,7 @@
 #include <math.h>
 #include <conio.h>
 
+#include "input_checking.h"
 #include "colors.h"
 #include "better_printf.h"
 #include "new_liner.h"
