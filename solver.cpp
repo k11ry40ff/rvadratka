@@ -3,11 +3,13 @@
 
 #include "solver.h"
 #include "roots_var.h"
+#include "compare_var.h"
 #include "kernel.h"
 #include "input_checking.h"
 #include "colors.h"
 #include "better_printf.h"
 #include "new_liner.h"
+#include "cat.h"
 
 const int IF_ENOUGH_INPUT = 4;
 
@@ -24,7 +26,10 @@ int input_and_ans() { // input  + calling ans_output
     char check_symbol = 0;
 
     if (scanf("%lg %lg %lg%c", &(variables.a), &(variables.b), &(variables.c), &check_symbol) == IF_ENOUGH_INPUT && do_check_symbol(check_symbol)) { // valid input
-
+        if (is_close(variables.a, 14) == EQUAL && is_close(variables.b, 1) == EQUAL && is_close(variables.c, 7) == EQUAL) {
+            cat();
+            return true;
+        }
         int res = solve_square(variables.a, variables.b, variables.c, &variables.solved_x1, &variables.solved_x2);
         answer_output(res, variables.solved_x1, variables.solved_x2);
     }
