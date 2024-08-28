@@ -18,9 +18,9 @@ void greetings() {
     new_line(1);
     bprintf(BLUE, DEFAULT_BG, IS_NOT_BOLD, IS_NOT_UNDERLINE, "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ  SQUARE EQUATION SOLVER  ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
     new_line(1);
-    bprintf(RED, DEFAULT_BG, IS_NOT_BOLD, IS_NOT_UNDERLINE, "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ\n");
+    bprintf(RED, DEFAULT_BG, IS_NOT_BOLD, IS_NOT_UNDERLINE, "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+    new_line(2);
 
-    new_line(1);
     bprintf(DEFAULT, DEFAULT_BG, IS_NOT_BOLD, IS_NOT_UNDERLINE, "%c - solve square equation, %c - start testing, any other key - exit.", SOLVER_BUTTON, TESTER_BUTTON);
     new_line(2);    
 }
@@ -56,13 +56,17 @@ int choice() {
             }
         }
         new_line(1);
+
         bprintf(DEFAULT, DEFAULT_BG, IS_NOT_BOLD, IS_NOT_UNDERLINE, "Try again? %c - solve square equation, %c - start testing , any other key - exit.", SOLVER_BUTTON, TESTER_BUTTON);
         new_line(2);
+
         input_button = getche();
         new_line(1);
     }
     new_line(1);
+
     bprintf(BLUE, WHITE_BG, IS_BOLD, IS_NOT_UNDERLINE, "Well, okay :(");
     new_line(1);
+    
     return 0;
 }

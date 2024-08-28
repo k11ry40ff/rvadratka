@@ -5,8 +5,6 @@
 #include "colors.h"
 #include "better_printf.h"
 
-const int SETTING_IS_TRUE = 1;
-
 void bprintf(const char* color, const char* bg_color, const int is_bold, const int is_underline, const char* line, ...) { //custom printf
     assert(color);
     assert(bg_color);
@@ -15,10 +13,10 @@ void bprintf(const char* color, const char* bg_color, const int is_bold, const i
     printf("%s", color);
     printf("%s", bg_color);
 
-    if (is_bold == SETTING_IS_TRUE) {
+    if (is_bold == IS_BOLD) {
         printf(BOLD);
     }
-    if (is_underline == SETTING_IS_TRUE) {
+    if (is_underline == IS_UNDERLINE) {
         printf(UNDERLINE);
     }
 

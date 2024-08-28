@@ -1,7 +1,8 @@
 #ifndef COMPARE_VAR_H
 #define COMPARE_VAR_H
 
-const int BIGGER_1  = 1; // for comparing
+// for comparing
+const int BIGGER_1  = 1;
 const int EQUAL     = 0;
 const int BIGGER_2 = -1;
 

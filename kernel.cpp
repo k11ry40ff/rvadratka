@@ -22,7 +22,7 @@ int solve_square(double a, double b, double c, double* solved_x1, double* solved
     else {
         double dscr = b*b - 4*a*c;
 
-        if (dscr < -BORDER) {
+        if (dscr < -BORDER) { 
             return ZERO_ROOTS;
         }
         else if (is_close(dscr, 0) == EQUAL) {
@@ -31,6 +31,7 @@ int solve_square(double a, double b, double c, double* solved_x1, double* solved
             if (is_close(square_x_b4_check, 0) == EQUAL) {
                 *solved_x1 = *solved_x2 = 0;
             }
+
             return ONE_ROOT;
         }
         else {
@@ -41,6 +42,7 @@ int solve_square(double a, double b, double c, double* solved_x1, double* solved
 
             *solved_x1 = -b_div_double_a - sqrt_dscr_div_double_a;
             *solved_x2 = -b_div_double_a + sqrt_dscr_div_double_a;
+
             return TWO_ROOTS;
         }
     }
@@ -62,6 +64,7 @@ int solve_linear(double b, double c, double * linear_x) {
         if (is_close(linear_x_b4_check, 0) == EQUAL) {
             *linear_x = 0;
         }
+        
         return ONE_ROOT;
     }
 }
