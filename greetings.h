@@ -8,4 +8,6 @@ void greetings();
 
 int choice();
 
+int work(int input_button);
+
 #endif

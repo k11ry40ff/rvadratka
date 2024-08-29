@@ -3,7 +3,5 @@
 int main() { // program repeating cycle
     greetings();
     
-    return choice();    
+    return work(choice());    
 }
-
-
